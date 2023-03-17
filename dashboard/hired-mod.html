@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netero / Candidatar-se</title>
+    <!-- Favicon ( logo ) -->
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1806/1806263.png">
+    <!-- Arquivos CSS -->
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/cssBase.css">
+    <link rel="stylesheet" href="../assets/css/dashboard/dashboard.css">
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <!-- Funcionalidades JavaScript -->
+    <script src="../components/sidenav.js"></script>
+</head>
+<body>
+    <div class="row">
+        <nav class="col s12 bg" style="width: 1200; margin: auto;">
+          <div class="nav-wrapper" style="background-color: #203A46;">
+            <a href="index.html" class="brand-logo" id="netero">NETERO</a>
+            <a href="#" class="sidenav-trigger" id="menu-trigger">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="#p1" id="sobrenvb">Sobre</a></li>
+              <li><a href="#p1" id="contatonvb">Contato </a></li>
+              <li><a href="login_page.html" id="loginnvb">Login</a></li>
+              <li><a href="login_page.html" id="loginnvb">Cadastrar</a></li>
+              <li><a href="#"><i class="material-icons  chat  medium"> chat</i></a></li>
+              <li><a href="perfil.html"><i  class="material-icons account_circle ">account_circle</i></a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+    
+    <ul id="slide-out" class="sidenav" style="background-color: #203A46;">
+        <li><a style="color: #fff;" href="login_page.html"><span style="font-size: 16px;" class="material-symbols-outlined">
+          account_circle
+          </span>  Perfil</a></li>
+        <li><a style="color: #fff;" href="#"><span style="font-size: 16px;" class="material-symbols-outlined">
+          chat
+          </span>  Chat</a></li>
+          <li><a style="color: #fff;" href="login_page.html"><span style="font-size: 16px;" class="material-symbols-outlined">
+            login
+            </span>  Login</a></li>
+            <li><a style="color: #fff;" href="login_page.html"><span style="font-size: 16px;" class="material-symbols-outlined">
+              person_add
+              </span>  Cadastrar</a></li>
+        <li><a style="color: #fff;" href="#"><span style="font-size: 16px;" class="material-symbols-outlined">
+          settings
+          </span>  Configurações</a></li>
+    </ul>
+
+    <div class="container">
+      <input type="text" class="search" style="width: 20%;">
+      <button onclick="mostrarVariavel()" style="background: transparent; padding: 15px; border: transparent;"> <i class="fas fa-search search-icon"></i></button>
+      <div id="resultado"></div>
+    </div>
+    <div style="height: 65px;"></div>
+
+    <div id="container_info">
+
+      <div class="vagas-candidatos">
+        <div class="grid">
+          <div id="foto">
+            <img id="perfil-foto" src="../assets/img/dashboard/vagas-candidatosFoto.jpg">
+          </div>
+          <span class="vaga-candidato-texto  titulo">
+            <span>VAGA PARA AUXILIAR DE 6ix9ine dabhopdbwbfsfab</span><br>
+            <span class="empresa-sub">{%nomeEmpresa}</span><br>
+          </span>
+        </div>
+
+
+
+
+        <div class="grid">
+          <div id="foto">
+            <img id="perfil-foto" src="../assets/img/dashboard/vagas-candidatosFoto.jpg">
+          </div>
+          <span class="vaga-candidato-texto  titulo">
+            <span>VAGA PARA AUXILIAR DE 6ix9ine</span><br>
+            <span class="empresa-sub">{%nomeEmpresa}</span><br>
+          </span>
+        </div>
+        <div class="grid">VAGA</div>
+        <div class="grid">VAGA</div>
+        <div class="grid">VAGA</div>
+        <div class="grid">VAGA</div>
+        <div class="grid">VAGA</div>
+
+      </div>
+
+      <!-- Lado da direita -->
+      <div class="info"><br>
+
+
+        <div id="sub-info">
+          <div id="foto">
+            <img src="../assets/img/dashboard/vagas-candidatosFoto.jpg">
+          </div>
+
+          <div class="subtitulo">
+            <span style="background-color: rgba(0, 128, 0, 0.355); border-radius: 5px;">Há: {%horas} Horas&nbsp;&nbsp;&nbsp;</span><br>
+            <span style="background-color: rgba(255, 0, 0, 0.355); border-radius: 5px;">data de expiração: {%expiracao}</span>&nbsp;&nbsp;<br><br>
+            <button class="subtitulo" id="candidatar" style="transition: background 0.2s linear;" onclick="abrirPopup()">Candidatar-se</button>
+          </div>
+        </div>
+        <br><div class="container  titulo">{%nomeEmpresa}</div><div style="height: 50px;"></div>
+          <span style="font-size: 22px; font-weight: bold; ">A Netero é uma empresa especializada no cuidado com idosos, adultos e crianças. Durante os anos a empresa vem desenvolvendo um serviço de excelência para pessoas que exigem qualidade e confiança. Fornecemos serviços adaptáveis com planos personalizados, buscando atender todas as necessidades do cliente.<br><br>
+
+            Nossos cuidadores são treinados de acordo com os princípios da humanização, levando aos lares um ambiente de bem-estar, carinho e conforto. Assim nossos clientes tem a possibilidade de desfrutar ao máximo do ambiente familiar, preservando a rotina e estimulando a independência.
+            
+            A Netero dispõe de um serviço de supervisão, que é feita por um profissional de enfermagem, responsável por montar um plano de cuidados, avaliar o atendimento, orientar o cuidador e manter a qualidade do serviço.<br><br>
+            
+            Diariamente o cuidador faz anotações em nosso livro de rotina para que os familiares tenham acesso as informações sobre o que ocorreu durante o dia com a pessoa que está sob os cuidados da Netero, criando assim, uma relação de segurança e confiança entre a família e a empresa.</span>
+
+            
+      </div>
+
+
+    </div>
+
+<!-- Form Popup Dixavado no sigilo e div secreta overlay escuro-->
+    <div id="overlay"></div>
+
+    <div id="popup" style="display:none;">
+      <h2>Candidate-se na {%nomeEmpresa}</h2>
+      <button id="sair"><i class="fas fa-times"></i></button>
+      <form>
+        <h3 style="font-size: 1.6rem; font-weight: 600;">Informações de Contato</h3>
+        <div class="popup-infos">E-mail*</div>
+        <input type="text" name="email" required><br><br>
+        <div class="popup-infos">Número de celular*</div>
+        <input type="text" name="numero" required><div style="height: 50px;"></div>
+        <div class="popup-infos">Currículo ( .PDF )</div><br>
+        <input style="font-size: 1rem; background: transparent;" type="file" id="curriculo" name="curriculo" accept="application/pdf" required>
+        <button id="enviar">Enviar</button>
+      </form>
+    </div>
+
+<!-- Deve se fazer um popup de confirmação logo abaixo to c preguiça-->
+    
+
+<script>
+
+
+var variavel1 = "SIMATA";
+var variavel2 = "VAGA DE PROSTITUIÇÃO ENCONTRADA !";
+var variavel3 =`
+▓▀▀▀▀▖―――▄▓▀▀▀▚―――――――
+▐▓▒▒▗░▐――█▒▒▒▐░▐―
+█▓▚▄▞▞―▗▓▓▓▃▄▀▄▀ 
+█▓▒░▐――▟▓▓▒░░▞―▄▓▀▀▀▀▖ 
+█▓▒░░▎─▟█▓▒▒░▞―▐▓▓▒░▗░▐ 
+▐▓▒░░▚▐█▓▒▒░░▎▎―▟▓▒▀▚▟▞ 
+▐█▓▒░░▒█▒▒░░░▚█▓▓▒░░▞ 
+▕█▓▓▒░▒▓▓▓▓▓▓▓▓▓▓▓▅▆▆▃ 
+▟█▓▒▒▒▓▒▒░░░░░░░▒▒▒█▓▒░░▀▖ 
+█▓▒▒▒░░░░▁▁▂▃▂▁░░█▒▒░░▚▐
+ ▐█▓▒▒▒░░░░▐▒▒░▞─―▔▚▄▂▂▞
+ ▐█▓▒▒▒░░░░▐▒▒░▚─―▂▞▀▔▔▚
+█▓▒▒▒░░░░▔▔▀▀▀▀▔░░█▒▒░░▞▐ 
+▜█▓▒▒▒▓▒▒░░░░░░░░▒▒▒█▓▒░░▞ 
+▕█▓▓▒░▒▓▓▓▓▓▓▓▓▓▓▓▓▀▀▀▔ 
+▐█▓▒░░▒█▒▒░░░▞█▓▓▒░░▚
+▐▓▒░░▞▐█▓▒▒░░▎▎―▜▓▒▄▞▜▚
+█▓▒░░▎─▜█▓▒▒░▚―▐▓▓▒░▝░▐ 
+█▓▒░▐――▜▓▓▒░░▚―▀▓▄▄▄▄▘ 
+█▓▞▀▚▚―▝▓▓▓▀▄▀▄―
+▐▓▒▒▝░▐――█▒▒▒▐░▐― 
+▀▓▄▄▄▄▘─――▀▓▄▄▄▞
+` ;
+
+function mostrarVariavel() {
+  var pesquisa = document.querySelector('.search').value;
+  if (pesquisa === "buceta") {
+    document.querySelector('#resultado').innerHTML = variavel1;
+  } else if (pesquisa === "pau") {
+    document.querySelector('#resultado').innerHTML = variavel2;
+  } else if (pesquisa === "tnc") {
+    document.querySelector('#resultado').innerHTML = variavel3;
+  } else {
+    document.querySelector('#resultado').innerHTML = "nADA encontrado";
+  }
+}
+
+
+
+
+/* Form */
+
+function abrirPopup() {
+  document.getElementById("popup").style.display = "block";
+}
+
+window.addEventListener("keydown", function(event) {
+  var popup = document.getElementById("popup");
+  if (event.key === "Escape") {
+    popup.style.display = "none";
+  }
+});
+
+var fecharBtn = document.getElementById("sair");
+var popup = document.getElementById("popup");
+
+fecharBtn.addEventListener("click", function() {
+  popup.style.display = "none";
+});
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+/* form pos & rules */
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 50%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0px;
+    height: calc(100% - 200px);
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .form__group {
+    height: 100px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* line */
+
+.form__field {
+    width: 30%;
+    border: 0;
+    border-bottom: 2px solid #000000;
+    outline: 0;
+    color: #000000;
+    font-weight: normal;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    font-size: 1.rem;
+    text-align: center;
+  }
+@media only screen and (max-width: 768px ){
+  .form__field{
+    width: 60%;
+  }
+}
+  .form__field::placeholder {
+    color: transparent;
+  }
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+
+  .form__field:focus {
+    padding-bottom: 6px;
+    font-weight: normal;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #9b9918ca, #d3da0a);
+    border-image-slice: 1;
+  }
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #d7d718;
+    font-weight: 700;
+  }
+
+  .form__field:required, .form__field:invalid {
+    box-shadow: none;
+  }
+  
+      /* label */
+  .form__label {
+    transition: 0.2s;
+    font-size: 1.3rem;
+    color: #000000;
+  }
+  
+
+  /* unique-grid */
+#senhas-grid {
+    display: flex;
+    flex-direction: row;
+  }
+
+#foto{
+width: 200px;
+height: 200px;
+background-color: rgba(128, 128, 128, 0.509);
+border: 2px solid rgb(255, 255, 0);
+border-radius: 50%; 
+overflow: hidden;
+}
+
+#foto img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+#cep-grid {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+}
+
+@media only screen and (max-width: 900px){
+  #cep-grid{
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+#endereco-grid {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+
+#select-grid {
+  display: flex;
+  flex-direction: row;
+  width: 10%;
+}
+
+@media only screen and (max-width: 1024px){
+  #endereco-grid{
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 1500px){
+  #select-grid{
+    display: flex;
+    flex-direction: row;
+    width: 26%;
+  }
+}
+.satanas{
+  line-height: 30px;
+  top: 0;
+  display: block;
+  font-weight: 700;
+  transition: 0.2s;
+  font-size: 1.4rem;
+  color: #000000;
+}
+  
+
+[class="browser-default my-select"] {
+  color: #000 !important;
+  background-color: #fff !important; 
+  border: 1px solid #ccc !important;
+  border-radius: 5px !important; 
+  height: 35px !important;
+  width: 150px !important;
+}
+
+
+
+.button {
+  border-radius: 3px;
+  transition: background 0.2s linear;
+  background: #1e84c4;
+  height: 60px;
+  width: 180px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.button:after {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(0);
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  content: "";
+  border-radius: 50%;
+}
+.button:hover {
+  cursor: pointer;
+}
+
+.left {
+  float: left;
+}
+
+span {
+  transform: translateX(-180px);
+  transition: transform 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  height: 60px;
+  flex-basis: 180px;
+  min-width: 180px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#toast {
+  position: absolute;
+  bottom: 20px;
+  transform: translateY(15vh);
+  transition: transform 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(4);
+  }
+}
+
+#autofill-button{
+  background-color: #565656;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 7rem;
+    height: 2.5rem;
+    font-size: 10px;
+}
+
+#texto-preto{
+  height:70px;
+  color: #000000c4;
+  letter-spacing: 0.5px;font-size: 42px;font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+

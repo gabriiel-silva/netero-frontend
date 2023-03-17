@@ -1,0 +1,8 @@
+1. tela perfil 
+2. tela contratação prof / hiring
+
+3. resolver bugs com css
+
+
+
+

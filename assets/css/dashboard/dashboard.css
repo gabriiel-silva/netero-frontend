@@ -1,0 +1,180 @@
+.container{
+display: flex;
+width: 100%;
+justify-content: center;
+}
+
+.search-icon{
+font-size: 24px;
+color: #203A46;
+}
+
+#container_info{
+display: flex;
+flex-direction: row;
+justify-content:space-around;
+}
+.vagas-candidatos {
+width: 47.5%;
+display: flex;
+flex-direction: column;
+overflow-y: scroll;
+}
+.info {
+width: 47.5%;
+background-color: #f1f1f1;
+border: 4px solid  #20462fbd;
+text-align: center;
+align-items: center;
+}
+.grid{
+background-color: #ddd;
+border: 4px solid #20462fbd;
+border-radius: 10px;
+margin-bottom: 0.2rem;
+flex-shrink: 1;
+flex-grow: 1;
+padding: 1rem;
+font-size: 1rem;
+height: 13rem;
+min-height: 13rem;
+max-height: 13rem;
+cursor: pointer;
+display: flex;
+align-items: center;
+}
+@media only screen and (max-width: 1670px ) {
+    .grid{
+    flex-direction: column;
+    min-height: 22rem;
+    height: 22rem;
+    }
+}
+@media only screen and (max-width: 760px ){
+    .grid{
+        min-height: 24rem;
+        height: 24rem;
+    }
+}
+
+#foto{
+min-width: 17rem;
+min-height: 11rem;
+width: 17rem;
+height: 11rem;
+background-color: rgba(128, 128, 128, 0.509);
+border: 2px solid rgb(255, 255, 0);
+overflow: hidden;
+}
+#foto img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.vaga-candidato-texto {
+flex-grow: 1;
+text-align: center;
+color: #000000;
+}
+#sub-info{
+display: flex;
+width: 100%;
+justify-content: space-between;
+}
+@media only screen and (max-width: 1000px){
+    #sub-info{
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.titulo{
+height:70px;
+color: #000000c4;
+letter-spacing: 0.5px;
+font-size: 28px;
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+text-align: center;     
+text-transform:uppercase;
+
+}
+.empresa-sub{
+    font-size:18px;
+    color: #0000009b;
+
+}
+
+@media only screen and (max-width: 1200px){
+    .titulo{
+        font-size: 22px;
+    }
+    .empresa-sub{
+        font-size: 14px;
+    }
+
+}
+
+
+
+
+.subtitulo{
+font-weight: 700;
+transition: 0.2s;
+font-size: 1.4rem;
+color: #000000;
+text-transform:capitalize;
+background: transparent;
+border: transparent;
+}
+
+#popup {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 60%;
+height: 60%;
+background-color: white;
+border: 1px solid black;
+padding: 20px;
+overflow-y: auto;
+}
+.popup-infos {
+font-size: 1.4rem;
+font-weight: 400;
+color: rgba(0,0,0,0,6);
+margin: 0 0 0.2rem;
+}
+#sair {
+position: absolute;
+top: 10px;
+right: 10px;
+background: transparent;
+border: transparent;
+font-size: 40px;
+}
+#candidatar{
+border-radius: 3px;
+background: #1e84c4;
+height: 60px;
+width: 180px;
+overflow: hidden;
+box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+#enviar{
+position: absolute;
+right: 50px;
+bottom: 25px;
+border-radius: 3px;
+background: #1e84c4;
+height: 60px;
+width: 180px;
+overflow: hidden;
+box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+font-weight: 700;
+transition: 0.2s;
+font-size: 1.4rem;
+color: #000000;
+border: transparent;
+}

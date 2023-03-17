@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa / Registrar</title>
+    
+    <!-- Favicon ( logo ) -->
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1806/1806263.png">
+
+    <!-- Arquivos CSS -->
+    <link rel="stylesheet" href="../assets/css/normalize.css"> 
+    <link rel="stylesheet" href="../assets/css/cssBase.css">  
+    <link rel="stylesheet" href="../assets/css/form/form.css">
+    <link rel="stylesheet" href="../assets/css/stakeholders/stakeholders.css">
+    <link rel="stylesheet" href="../assets/css/register/register.css">
+    <!-- Bibliotecas -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- JQuery -->
+
+    <!-- Frameworks -->
+      <!-- Materialize -->
+        <!-- CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Font Awesome -->
+      <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+      <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Funcionalidades JavaScript -->
+    <script src="../components/sidenav.js"></script>
+    <script src="../utils/requestCepAPI.js"></script>
+
+</head>
+<body>
+<div class="row">
+  <nav class="col s12 bg" style="width: 1200; margin: auto;">
+    <div class="nav-wrapper" style="background-color: #203A46;">
+        <a href="index.html" class="brand-logo" id="netero">NETERO</a>
+        <a href="#" class="sidenav-trigger" id="menu-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#"><i class="material-icons  chat  medium"> chat</i></a></li>
+          <li><a href="#"><i  class="material-icons account_circle ">account_circle</i></a></li>
+        </ul>
+    </div>
+  </nav>
+</div>
+
+<ul id="slide-out" class="sidenav" style="background-color: #203A46;">
+  <li><a style="color: #fff;" href="#"><span style="font-size: 16px;" class="material-symbols-outlined">
+    account_circle
+    </span>  Perfil</a></li>
+  <li><a style="color: #fff;" href="#"><span style="font-size: 16px;" class="material-symbols-outlined">
+    chat
+    </span>   Chat</a></li>
+</ul>
+
+<div id="container" style="height:150px; color: #000000c4; letter-spacing: 0.5px;font-size: 42px;font-family: 'Montserrat', sans-serif; font-weight: bold; text-align: center;">
+  Cadastrar Empresa
+</div>
+<div id="container" style="flex-direction: column;height: auto;">
+  <div class="form__group field">
+    <label class="form__label">Nome Fantasia:</label>
+    <input type="input" class="form__field" name="nome" required/>
+  </div>
+  <div class="form__group field">
+    <label class="form__label">CNPJ:</label>
+    <input type="input" class="form__field" name="cnpj" required/>
+  </div>
+  <div class="form__group field">
+    <label class="form__label">Email de Contato:</label>
+    <input type="input" class="form__field" name="email" required/>
+  </div>
+  <div class="form__group field">
+    <label class="form__label">Número de Contato:</label>
+    <input type="input" class="form__field" name="numero" required/>
+  </div>
+    
+  <div id="senhas-grid">
+    <div style="width: fit-content;" class="form__group field">
+      <label class="form__label">Senha:</label>
+      <input style="width: fit-content; border-bottom: 2px solid #000000;" type="password" class="form__field" name="senha" id='senha1' required/>
+    </div>&nbsp&nbsp&nbsp&nbsp&nbsp
+    <div style="width: fit-content;" class="form__group field">
+      <label class="form__label">Confirmar Senha:</label>
+      <input style="width: fit-content; border-bottom: 2px solid #000000;" type="password" class="form__field" id='senha2' required/>
+    </div>
+</div>
+
+<div style="height: 100px;"></div>
+
+<div style="height:70px; color: #000000c4; letter-spacing: 0.5px;font-size: 42px;font-family: 'Montserrat', sans-serif; font-weight: bold; text-align: center;">Endereço</div>
+
+  <div class="form__group field">
+    <label for="cep" class="form__label">CEP:</label>
+    <input type="input" class="form__field" placeholder="cep" name="cep" id='cep' required />
+  </div><br>
+
+
+<div id="cep-grid">
+  <div style="width: 100%; align-self: center; text-align: center;">
+    <a href="https://buscacepinter.correios.com.br/app/endereco/index.php">Buscar CEP</a>
+  </div>
+<br>
+  <div style="width: 100%; text-align: center;">
+    <button function="#" id="autofill-button">Auto Preencher</button>
+  </div>
+
+</div><br><br>
+
+
+  <div id="select-grid">
+    <div style="width: 70%;" class="satanas">
+      UF:&nbsp;
+    </div>
+    <select style="width: 30%;" class="browser-default my-select" id="slctuf" name="uf" required="required">
+      <option value="" disabled="disabled" selected="selected">Estados</option>
+    </select>
+  </div><br>
+  
+  <div id="select-grid">
+    <div style="width: 70%;" class="satanas">
+      Cidade:&nbsp;
+    </div>
+    <select style="width: 30%;" class="browser-default my-select" id="slctcidade" name="cidade" required="required">
+      <option value="" disabled="disabled" selected="selected">Cidades</option>
+    </select>
+  </div>
+
+<div id="endereco-grid">
+  <div style="width: 50%;" class="form__group field">
+      <label for="rua" class="form__label">Logradouro:</label>
+      <input type="input" style="width: 50%;" class="form__field" placeholder="logradouro" name="logradouro" id='logradouro' required />
+  </div>&nbsp&nbsp&nbsp&nbsp&nbsp
+  <div style="width: 50%;" class="form__group field">
+    <label for="rua" class="form__label">Bairro:</label>
+    <input type="input" style="width: 50%;"class="form__field" placeholder="bairro" name="bairro" id='bairro' required />
+</div>&nbsp&nbsp&nbsp&nbsp&nbsp
+  <div style="width: 15%;" class="form__group field">
+      <label for="numero" class="form__label">Nº:</label>
+      <input type="input" style="width: 50%;"  class="form__field" placeholder="numero" name="numero" id='numero' required />
+  </div>&nbsp&nbsp&nbsp&nbsp&nbsp
+  <div style="width: 35%;" class="form__group field">
+      <label for="numero" class="form__label">Complemento:</label>
+      <input type="input" style="width: 50%;" class="form__field" placeholder="comp" name="comp" id='comp' required />
+  </div>
+</div>
+
+<div style="height: 70px;"></div>
+
+<div class="button" id="btn">
+  <span><i class="material-icons">Send</i></span>
+  <span class="left">Cadastrar</span>  
+</div><div style="height: 70px"></div>
+
+</div>
+<script>
+
+  $(document).ready(function() {
+  $('#autofill-button').click(function() {
+    var cep = $('#cep').val().replace('-', '');   
+    if (cep.length != 8 || isNaN(cep)) {
+      alert('CEP inválido');
+    } else {
+      $.getJSON(`https://viacep.com.br/ws/${cep}/json/`, function(data) {
+        if (data.erro) {
+          alert('CEP não encontrado');
+        } else {
+          $('#logradouro').val(data.logradouro);
+          $('#bairro').val(data.bairro);
+
+          $.getJSON(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${data.uf}`, function(ufData) {
+            $('#slctuf option').each(function() {
+              if ($(this).text() == ufData.nome) {
+                $(this).attr('selected', 'selected');
+                $('#slctuf').trigger('change');
+              }
+            });
+          });
+
+          $.getJSON(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${data.uf}/municipios`, function(municipios) {
+            $('#slctcidade option').remove();
+            $('#slctcidade').append('<option value="" disabled="disabled" selected="selected">Cidades</option>');
+            municipios.forEach(function(municipio) {
+              var option = $('<option></option>').attr('value', municipio.nome).text(municipio.nome);
+              $('#slctcidade').append(option);
+            });
+            $('#slctcidade option').each(function() {
+              if ($(this).text() == data.localidade) {
+                $(this).attr('selected', 'selected');
+              }
+            });
+          });
+        }
+      });
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>
