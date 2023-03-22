@@ -75,82 +75,62 @@
       <div class="vagas-candidatos">
         <div class="grid">
           <div id="foto">
-            <img id="perfil-foto" src="../assets/img/dashboard/vagas-candidatosFoto.jpg">
+            <img id="perfil-foto" src="../assets/img/dashboard/medico.jpg">
           </div>
           <span class="vaga-candidato-texto  titulo">
-            <span>VAGA PARA AUXILIAR IDOSO COM CAGANEIRA</span><br>
-            <span class="empresa-sub">{%nomeEmpresa}</span><br>
+            <span>LIMPADOR DE BOSTA</span><br>
+            <span class="empresa-sub">{%nomeCuidador}</span><br>
           </span>
         </div>
 
         <div class="grid">
-          <div id="foto">
-            <img id="perfil-foto" src="">
-          </div>
-          <span class="vaga-candidato-texto  titulo">
-            <span>VAGA</span><br>
-            <span class="empresa-sub">{%nomeEmpresa}</span><br>
-          </span>
+            <div id="foto">
+              <img id="perfil-foto" src="">
+            </div>
+            <span class="vaga-candidato-texto  titulo">
+              <span>Cuidador</span><br>
+              <span class="empresa-sub">{%nomeCuidador}</span><br>
+            </span>
+        </div>
+        
+        <div class="grid">
+            <div id="foto">
+              <img id="perfil-foto" src="">
+            </div>
+            <span class="vaga-candidato-texto  titulo">
+              <span>Cuidador</span><br>
+              <span class="empresa-sub">{%nomeCuidador}</span><br>
+            </span>
         </div>
 
         <div class="grid">
-          <div id="foto">
-            <img id="perfil-foto" src="">
-          </div>
-          <span class="vaga-candidato-texto  titulo">
-            <span>VAGA</span><br>
-            <span class="empresa-sub">{%nomeEmpresa}</span><br>
-          </span>
+            <div id="foto">
+              <img id="perfil-foto" src="">
+            </div>
+            <span class="vaga-candidato-texto  titulo">
+              <span>Cuidador</span><br>
+              <span class="empresa-sub">{%nomeCuidador}</span><br>
+            </span>
         </div>
 
         <div class="grid">
-          <div id="foto">
-            <img id="perfil-foto" src="">
-          </div>
-          <span class="vaga-candidato-texto  titulo">
-            <span>VAGA</span><br>
-            <span class="empresa-sub">{%nomeEmpresa}</span><br>
-          </span>
+            <div id="foto">
+              <img id="perfil-foto" src="">
+            </div>
+            <span class="vaga-candidato-texto  titulo">
+              <span>Cuidador</span><br>
+              <span class="empresa-sub">{%nomeCuidador}</span><br>
+            </span>
         </div>
 
         <div class="grid">
-          <div id="foto">
-            <img id="perfil-foto" src="">
-          </div>
-          <span class="vaga-candidato-texto  titulo">
-            <span>VAGA</span><br>
-            <span class="empresa-sub">{%nomeEmpresa}</span><br>
-          </span>
-        </div>
-
-        <div class="grid">
-          <div id="foto">
-            <img id="perfil-foto" src="">
-          </div>
-          <span class="vaga-candidato-texto  titulo">
-            <span>VAGA</span><br>
-            <span class="empresa-sub">{%nomeEmpresa}</span><br>
-          </span>
-        </div>
-
-        <div class="grid">
-          <div id="foto">
-            <img id="perfil-foto" src="">
-          </div>
-          <span class="vaga-candidato-texto  titulo">
-            <span>VAGA</span><br>
-            <span class="empresa-sub">{%nomeEmpresa}</span><br>
-          </span>
-        </div>
-
-        <div class="grid">
-          <div id="foto">
-            <img id="perfil-foto" src="">
-          </div>
-          <span class="vaga-candidato-texto  titulo">
-            <span>VAGA</span><br>
-            <span class="empresa-sub">{%nomeEmpresa}</span><br>
-          </span>
+            <div id="foto">
+              <img id="perfil-foto" src="">
+            </div>
+            <span class="vaga-candidato-texto  titulo">
+              <span>Cuidador</span><br>
+              <span class="empresa-sub">{%nomeCuidador}</span><br>
+            </span>
         </div>
 
       </div>
@@ -161,16 +141,16 @@
 
         <div id="sub-info">
           <div id="foto">
-            <img src="../assets/img/dashboard/vagas-candidatosFoto.jpg">
+            <img src="../assets/img/dashboard/medico.jpg">
           </div>
 
           <div class="subtitulo">
-            <span style="background-color: rgba(0, 128, 0, 0.355); border-radius: 5px;">Há: {%horas} Horas&nbsp;&nbsp;&nbsp;</span><br>
-            <span style="background-color: rgba(255, 0, 0, 0.355); border-radius: 5px;">data de expiração: {%expiracao}</span>&nbsp;&nbsp;<br><br>
-            <button class="subtitulo" id="candidatar" style="transition: background 0.2s linear;" onclick="abrirPopup()">Candidatar-se</button>
+            <br>
+            <br><br>
+            <button class="subtitulo" id="candidatar" onclick="abrirPopup()">Entrar em Contato</button>
           </div>
         </div>
-        <br><div class="container  titulo">{%nomeEmpresa}</div><div style="height: 50px;"></div>
+        <br><div class="container  titulo">{%nomeCuidador}</div><div style="height: 50px;"></div>
           <span style="font-size: 22px; font-weight: bold; ">A Netero é uma empresa especializada no cuidado com idosos, adultos e crianças. Durante os anos a empresa vem desenvolvendo um serviço de excelência para pessoas que exigem qualidade e confiança. Fornecemos serviços adaptáveis com planos personalizados, buscando atender todas as necessidades do cliente.<br><br>
 
             Nossos cuidadores são treinados de acordo com os princípios da humanização, levando aos lares um ambiente de bem-estar, carinho e conforto. Assim nossos clientes tem a possibilidade de desfrutar ao máximo do ambiente familiar, preservando a rotina e estimulando a independência.
@@ -185,16 +165,14 @@
     <div id="overlay"></div>
 
     <div id="popup" style="display:none;">
-      <h2>Candidate-se na {%nomeEmpresa}</h2>
+      <h2>Entrar em Contato com {%nomeCuidador}</h2>
       <button class="exitCss" id="sair"><i class="fas fa-times"></i></button>
       <form>
-        <h3 style="font-size: 1.6rem; font-weight: 600;">Informações de Contato</h3>
+        <h3 style="font-size: 1.6rem; font-weight: 600;">Informações de Contato</h3><br>
         <div class="popup-infos">E-mail*</div>
         <input type="text" name="email" required><br><br>
-        <div class="popup-infos">Número de celular*</div>
+        <div class="popup-infos">Número de Contato*</div>
         <input type="text" name="numero" required><div style="height: 50px;"></div>
-        <div class="popup-infos">Currículo ( .PDF )</div><br>
-        <input style="font-size: 1rem; background: transparent;" type="file" id="curriculo" name="curriculo" accept="application/pdf" required>
         <button id="enviar">Enviar</button>
       </form>
     </div>
@@ -202,8 +180,9 @@
 
     <div id="submit-confirmacao" style="display:none;">
       <button class="exitCss" id="sair-submit"><i class="fas fa-times"></i></button>
-      <h2>Sua inscrição foi enviada com sucesso!</h2>
-      <p>Será enviado uma confirmação ao seu e-mail cadastrado.</p>
+      <h2>Cuidador Notificado!</h2>
+      <p>O cuidador será nofitificado em seu email.</p>
+      <p>Fique a vontade para entrar em contato com ele pelo chat do site.</p>
     </div>
 
     

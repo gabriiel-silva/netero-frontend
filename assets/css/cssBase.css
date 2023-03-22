@@ -1,5 +1,5 @@
 body{
-  background-color: rgba(128, 128, 128, 0.405) !important;
+  background-color: #fff !important;
 }
 
 #container {
@@ -166,7 +166,6 @@ html {
   font-weight: bold;
   align-items:start;
 }
-
 #container_login {
   display: flex;
   width: 100%;
@@ -176,7 +175,6 @@ html {
   justify-content: center;
   
 } 
-
 @media only screen and (max-width: 750px) {
   #users{
     flex-wrap: nowrap;
@@ -189,9 +187,19 @@ html {
   }
 
 /* estilo da porra do lado */ 
-
 .sidenav {
-  background-color: #203A46;
-  color: #fff;
+background-color: #203A46;
+color: #fff;
+}
 
+.parallax{
+display: flex;
+height: 700px;
+background-attachment: fixed;
+background-position: center bottom;
+background-repeat: no-repeat;
+background-size: cover;
+justify-content: center;
+filter:brightness(0.60) opacity(1);
+align-items: center;
 }
