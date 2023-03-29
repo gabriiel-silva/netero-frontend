@@ -41,6 +41,8 @@ body{
 }
 
 form{
+    display: flex;
+    flex-direction: column;
     height: 640px; /* normal size 520px */
     width: 400px;
     background-color: rgba(45, 43, 40, 0.903);
@@ -89,7 +91,7 @@ input{
 }
 #registrarButton{
   width: 100%;
-  background-color: #ffffffb1;
+  background-color: white;
   font-family: 'Poppins',sans-serif;
   color: #080710;
   padding: 15px 0;
@@ -101,7 +103,7 @@ input{
     cursor: not-allowed;
     margin-top: 50px;
     width: 100%;
-    background-color: #ffffffb1;
+    background-color: white;
     font-family: 'Poppins',sans-serif;
     color: #080710;
     padding: 15px 0;
@@ -113,14 +115,20 @@ input{
   cursor: pointer; 
 }
 button{
-  width: 100%;
-  background-color: #ffffffb1;
+  background-color: #ffffff !important;
   font-family: 'Poppins',sans-serif;
   color: #080710;
   padding: 15px 0;
   font-size: 18px;
   font-weight: 600;
+  cursor: pointer;
   border-radius: 5px;
+}
+.buttonText{
+  color: #080710;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
 }
 .social{
   margin-top: 30px;
