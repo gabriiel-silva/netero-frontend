@@ -8,8 +8,8 @@
     <!-- Favicon ( logo ) -->
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1806/1806263.png">
     <!-- Arquivos CSS -->
-    <link rel="stylesheet" href="assets\css\normalize.css">
-    <link rel="stylesheet" href="assets\css\cssBase.css">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/cssBase.css">
     <!-- Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -22,13 +22,13 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <!-- Funcionalidades Javascript -->
-    <script src="components/sidenav.js"></script>
+    <script src="../components/sidenav.js"></script>
 </head>
 <body>
   <div class="row">
     <nav class="col s12 bg" style="width: 1200; margin: auto;">
       <div class="nav-wrapper" style="background-color: #203A46;">
-        <a href="index.html" class="brand-logo" id="netero">NETERO</a>
+        <a href="../index.html" class="brand-logo" id="netero">NETERO</a>
         <a href="#" class="sidenav-trigger" id="menu-trigger">
           <i class="material-icons">menu</i>
         </a>
@@ -38,7 +38,7 @@
           <li><a href="../login/login_page.html" id="loginnvb">Login</a></li>
           <li><a href="../login/switchUsers.html" id="loginnvb">Cadastrar</a></li>
           <li><a href="#"><i class="material-icons  chat  medium"> chat</i></a></li>
-          <li><a href="perfil.html"><i  class="material-icons account_circle ">account_circle</i></a></li>
+          <li><a href="#"><i  class="material-icons account_circle ">account_circle</i></a></li>
         </ul>
       </div>
     </nav>
@@ -134,17 +134,13 @@
 
 
 <script>
-
-/* sobre & contato js */
 document.getElementById("sobrenvb").addEventListener("click", function() {
-    document.getElementById("sobre-pulo").scrollIntoView();
-  });
+document.getElementById("sobre-pulo").scrollIntoView();
+});
 
-
-  document.getElementById("contatonvb").addEventListener("click", function() {
-    document.getElementById("contato-pulo").scrollIntoView();
-  });
-
+document.getElementById("contatonvb").addEventListener("click", function() {
+document.getElementById("contato-pulo").scrollIntoView();
+});
 </script>
 </body>
 </html>
