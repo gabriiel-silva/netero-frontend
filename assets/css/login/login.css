@@ -87,17 +87,40 @@ input{
 ::placeholder{
     color: #e5e5e5;
 }
-button{
+#registrarButton{
+  width: 100%;
+  background-color: #ffffffb1;
+  font-family: 'Poppins',sans-serif;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+#conectarButton{
     cursor: not-allowed;
-    pointer-events: all !important;
     margin-top: 50px;
     width: 100%;
     background-color: #ffffffb1;
+    font-family: 'Poppins',sans-serif;
     color: #080710;
     padding: 15px 0;
     font-size: 18px;
     font-weight: 600;
     border-radius: 5px;
+}
+#conectarButton:not([disabled]) {
+  cursor: pointer; 
+}
+button{
+  width: 100%;
+  background-color: #ffffffb1;
+  font-family: 'Poppins',sans-serif;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
 }
 .social{
   margin-top: 30px;
@@ -121,5 +144,3 @@ button{
 .social i{
   margin-right: 4px;
 }
-
-

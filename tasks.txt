@@ -1,8 +1,8 @@
-1. tela perfil 
-2. tela contratação prof / hiring
-
-3. resolver bugs com css
-
-
-
-
+resolver bugs com botoes e formulario pop up
+download assets imgs leo
+importar imagens
+API
+tela perfil
+tela contratação
+design Registrar
+carousel  index

@@ -8,11 +8,10 @@
     <!-- Estilos CSS personalizados -->
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="stylesheet" href="../assets/css/cssBase.css">
-    <link rel="stylesheet" href="../assets/css/form/form.css">
+    <link rel="stylesheet" href="../assets/css/login/login.css">
     <link rel="stylesheet" href="../assets/css/stakeholders/stakeholders.css">
 
     <!-- Scripts JS personalizados -->
-    <script src="../utils/login_page.js"></script>
     <script src="../components/sidenav.js"></script>
 
     <!-- Estilos CSS de fontes e ícones externos -->
@@ -30,6 +29,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Ícones do Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
     
 </head>
 <body>
@@ -42,14 +42,14 @@
             </a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li><a href="#"><i class="material-icons  chat  medium"> chat</i></a></li>
-              <li><a href="login_page.html"><i  class="material-icons account_circle ">account_circle</i></a></li>
+              <li><a href="#"><i  class="material-icons account_circle ">account_circle</i></a></li>
             </ul>
           </div>
         </nav>
     </div>
 
       <ul id="slide-out" class="sidenav" style="background-color: #203A46;">
-        <li><a style="color: #fff;" href="login_page.html"><span style="font-size: 16px;" class="material-symbols-outlined">
+        <li><a style="color: #fff;" href="#"><span style="font-size: 16px;" class="material-symbols-outlined">
           account_circle
           </span>  Perfil</a></li>
         <li><a style="color: #fff;" href="#"><span style="font-size: 16px;" class="material-symbols-outlined">
@@ -86,26 +86,61 @@
           <input type="text" placeholder="" id="username">
           <label for="password">Senha</label>
           <input type="password" placeholder="" id="senha">
-          <button disabled style="margin-top: 50px;
-            width: 100%;
-            background-color: #ffffffb1;
-            color: #080710;
-            padding: 15px 0;
-            font-size: 18px;
-            font-weight: 600;
-            font-family: 'Poppins',sans-serif;
-            border-radius: 5px;">Conectar</button>
+          <button id="conectarButton" href="#" disabled>Conectar</button>
           <div style="height: 20px;"></div>
-          <button id="login" style="cursor:pointer; background-color: #ffffff"><a style=" color: #080710;font-size: 18px;font-weight: 600; text-decoration: none;" href="switchUsers.html">Registrar</a></button>
+          <button id="registrarButton"><a style="color: #080710;" href="switchUsers.html">Registrar</a></button>
           <div class="social">
-            <div class="go"><a href="{{ url_for('google.login') }}" class="fab fa-google"></a>Google</div>
-            <div class="fb"><i class="fab"></i>  LinkedIn</div>
+            <div> <a style="color: white;" href="#">Google</a></div>
+            <div class="fb  "> <i class="fab"> </i><a style="color: white;" href="#">LinkedIn</a></div>
           </div>
         </div>
       </div>
     </form>
-      
-      
 
+<script>
+        
+const radioInputs = document.querySelectorAll('input[name="usuario"]');
+const conectarButton = document.getElementById("conectarButton");
+
+radioInputs.forEach((input) => {
+  input.addEventListener("click", () => {
+    if (input.checked) {
+      conectarButton.disabled = false;
+    }
+  });
+});
+
+
+
+  const clienteRadio = document.getElementById('infoCliente');
+  const cuidadorRadio = document.getElementById('infoCuidador');
+  const empresaRadio = document.getElementById('infoEmpresa');
+  const registrarButton = document.getElementById('registrarButton');
+
+  clienteRadio.checked = false;
+  cuidadorRadio.checked = false;
+  empresaRadio.checked = false;
+
+  clienteRadio.addEventListener('click', () => {
+    registrarButton.querySelector('a').href = '../register/customerReg.html';
+  });
+
+  cuidadorRadio.addEventListener('click', () => {
+    registrarButton.querySelector('a').href = '../register/professReg.html';
+  });
+
+  empresaRadio.addEventListener('click', () => {
+    registrarButton.querySelector('a').href = '../register/companyReg.html';
+  });
+
+  window.onload = function() {
+    if (clienteRadio.checked || cuidadorRadio.checked || empresaRadio.checked) {
+      clienteRadio.checked = false;
+      cuidadorRadio.checked = false;
+      empresaRadio.checked = false;
+    }
+  };
+
+</script>
 </body>
 </html>

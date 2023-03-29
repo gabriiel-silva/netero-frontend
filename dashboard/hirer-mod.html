@@ -34,12 +34,8 @@
               <i class="material-icons">menu</i>
             </a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><a href="#p1" id="sobrenvb">Sobre</a></li>
-              <li><a href="#p1" id="contatonvb">Contato </a></li>
-              <li><a href="login_page.html" id="loginnvb">Login</a></li>
-              <li><a href="login_page.html" id="loginnvb">Cadastrar</a></li>
               <li><a href="#"><i class="material-icons  chat  medium"> chat</i></a></li>
-              <li><a href="perfil.html"><i  class="material-icons account_circle ">account_circle</i></a></li>
+              <li><a href="#"><i  class="material-icons account_circle ">account_circle</i></a></li>
             </ul>
           </div>
         </nav>
@@ -52,15 +48,6 @@
         <li><a style="color: #fff;" href="#"><span style="font-size: 16px;" class="material-symbols-outlined">
           chat
           </span>  Chat</a></li>
-          <li><a style="color: #fff;" href="login_page.html"><span style="font-size: 16px;" class="material-symbols-outlined">
-            login
-            </span>  Login</a></li>
-            <li><a style="color: #fff;" href="login_page.html"><span style="font-size: 16px;" class="material-symbols-outlined">
-              person_add
-              </span>  Cadastrar</a></li>
-        <li><a style="color: #fff;" href="#"><span style="font-size: 16px;" class="material-symbols-outlined">
-          settings
-          </span>  Configurações</a></li>
     </ul>
 
     <div class="container">
@@ -78,7 +65,7 @@
             <img id="perfil-foto" src="../assets/img/dashboard/medico.jpg">
           </div>
           <span class="vaga-candidato-texto  titulo">
-            <span>LIMPADOR DE BOSTA</span><br>
+            <span>CUIDADOR</span><br>
             <span class="empresa-sub">{%nomeCuidador}</span><br>
           </span>
         </div>
@@ -191,9 +178,8 @@
 
 <script>
 
-
-var variavel1 = "VAGA 1";
-var variavel2 = "VAGA 2 !";
+var variavel1 = "vaga1 encontrada";
+var variavel2 = "vagq 2 encontrada mlk";
 var variavel3 =`
 ▓▀▀▀▀▖―――▄▓▀▀▀▚―――――――
 ▐▓▒▒▗░▐――█▒▒▒▐░▐―
@@ -221,16 +207,17 @@ var variavel3 =`
 
 function mostrarVariavel() {
   var pesquisa = document.querySelector('.search').value;
-  if (pesquisa === "1") {
+  if (pesquisa === "vaga1") {
     document.querySelector('#resultado').innerHTML = variavel1;
-  } else if (pesquisa === "2") {
+  } else if (pesquisa === "vaga2") {
     document.querySelector('#resultado').innerHTML = variavel2;
-  } else if (pesquisa === "3") {
+  } else if (pesquisa === "vaga3") {
     document.querySelector('#resultado').innerHTML = variavel3;
   } else {
-    document.querySelector('#resultado').innerHTML = "nADA encontrado";
+    document.querySelector('#resultado').innerHTML = "nada encontrado";
   }
 }
+
 
 
 

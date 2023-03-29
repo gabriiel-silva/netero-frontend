@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1806/1806263.png">
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/normalize.css">
-    <link rel="stylesheet" href="../assets/css/form/form.css">
+    <link rel="stylesheet" href="../assets/css/login/login.css">
     <link rel="stylesheet" href="../assets/css/cssBase.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Materialize JS -->
@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- Importing Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <!-- Funcionalidades Javascript -->
+    <script src="../components/sidenav.js"></script>
+    
 </head>
 <body>
     <div class="row">
@@ -38,7 +41,7 @@
             <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li><a href="login_page.html" id="loginnvb">Login</a></li>
               <li><a href="#"><i class="material-icons  chat  medium"> chat</i></a></li>
-              <li><a href="login_page.html"><i  class="material-icons account_circle ">account_circle</i></a></li>
+              <li><a href="#"><i  class="material-icons account_circle ">account_circle</i></a></li>
             </ul>
           </div>
         </nav>
@@ -57,11 +60,11 @@
     <div id="usersForm" style="align-items: center; transform: translate(0%, 50%);">
         <form style="height: 470px;" method="post">
             <h3>Quem é você?</h3>
-            <button style="cursor:pointer; background-color: #ffffff"><a style=" color: #080710;font-size: 18px;font-weight: 600; text-decoration: none;" href="customerReg.html">Cliente</a></button>
+            <button style="cursor:pointer; background-color: #ffffff"><a style=" color: #080710;font-size: 18px;font-weight: 600; text-decoration: none;" href="../register/customerReg.html">Cliente</a></button>
             <div style="height: 40px;"></div>
-            <button style="cursor:pointer; background-color: #ffffff"><a style=" color: #080710;font-size: 18px;font-weight: 600; text-decoration: none;" href="companyReg.html">Empresa</a></button>
+            <button style="cursor:pointer; background-color: #ffffff"><a style=" color: #080710;font-size: 18px;font-weight: 600; text-decoration: none;" href="../register/companyReg.html">Empresa</a></button>
             <div style="height: 40px;"></div>
-            <button style="cursor:pointer; background-color: #ffffff"><a style=" color: #080710;font-size: 18px;font-weight: 600; text-decoration: none;" href="professReg.html">Cuidador</a></button>
+            <button style="cursor:pointer; background-color: #ffffff"><a style=" color: #080710;font-size: 18px;font-weight: 600; text-decoration: none;" href="../register/professReg.html">Cuidador</a></button>
         </form>
     </div>
 </body>
