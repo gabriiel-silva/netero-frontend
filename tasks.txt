@@ -2,9 +2,8 @@ resolver bugs com botoes(OK)
 formulario pop up (OK)   trabalhar com overlay escuro 
 carousel  index (OK)
 download assets imgs leo (OK)
-importar imagens ()
-API ()
+importar imagens (OK)
+design Registrar ()
 tela perfil ()
 tela contratação ()
-design Registrar ()
-
+API ()

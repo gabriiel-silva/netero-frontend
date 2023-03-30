@@ -71,8 +71,8 @@ align-items: center;
         height: 24rem;
     }
 }
-
 #foto{
+margin-left: 20px;
 min-width: 17rem;
 min-height: 11rem;
 width: 17rem;
