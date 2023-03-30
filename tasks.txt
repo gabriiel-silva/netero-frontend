@@ -1,8 +1,9 @@
-resolver bugs com botoes e formulario pop up
-download assets imgs leo
-importar imagens
-API
-tela perfil
-tela contratação
-design Registrar
-carousel  index
+resolver bugs com botoes(OK)
+formulario pop up ()
+download assets imgs leo ()
+importar imagens ()
+API ()
+tela perfil ()
+tela contratação ()
+design Registrar ()
+carousel  index ()

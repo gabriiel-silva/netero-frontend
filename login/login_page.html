@@ -86,12 +86,12 @@
           <input type="text" placeholder="" id="username">
           <label for="password">Senha</label>
           <input type="password" placeholder="" id="senha">
-          <button id="conectarButton" href="#" disabled>Conectar</button>
+          <a class="formButton" style="background-color: rgba(200, 200, 200, 0.829);" id="conectarButton" href="#" disabled>Conectar</a>
           <div style="height: 20px;"></div>
-          <button id="registrarButton"><a style="color: #080710;" href="switchUsers.html">Registrar</a></button>
+          <a id="registrarButton" class="formButton" href="switchUsers.html">Registrar</a>
           <div class="social">
-            <div> <a style="color: white;" href="#">Google</a></div>
-            <div class="fb  "> <i class="fab"> </i><a style="color: white;" href="#">LinkedIn</a></div>
+            <a class="socialItens" href="#">Google</a>
+            <a class="socialItens" style="margin-left: 25px;" href="#">LinkedIn</a>
           </div>
         </div>
       </div>
@@ -99,47 +99,55 @@
 
 <script>
         
-const radioInputs = document.querySelectorAll('input[name="usuario"]');
-const conectarButton = document.getElementById("conectarButton");
-
-radioInputs.forEach((input) => {
-  input.addEventListener("click", () => {
-    if (input.checked) {
-      conectarButton.disabled = false;
+const conectarButton = document.getElementById('conectarButton');
+const radios = document.querySelectorAll('input[type="radio"]');
+radios.forEach(radio => {
+  radio.addEventListener('click', () => {
+    const selectedValue = document.querySelector('input[name="usuario"]:checked').value;
+    if (selectedValue === 'cliente' || selectedValue === 'cuidador' || selectedValue === 'empresa') {
+      conectarButton.removeAttribute('disabled');
+      conectarButton.style.backgroundColor = 'white';
     }
   });
 });
 
 
 
-  const clienteRadio = document.getElementById('infoCliente');
-  const cuidadorRadio = document.getElementById('infoCuidador');
-  const empresaRadio = document.getElementById('infoEmpresa');
-  const registrarButton = document.getElementById('registrarButton');
 
-  clienteRadio.checked = false;
-  cuidadorRadio.checked = false;
-  empresaRadio.checked = false;
 
-  clienteRadio.addEventListener('click', () => {
-    registrarButton.querySelector('a').href = '../register/customerReg.html';
-  });
 
-  cuidadorRadio.addEventListener('click', () => {
-    registrarButton.querySelector('a').href = '../register/professReg.html';
-  });
+const clienteRadio = document.getElementById('infoCliente');
+const cuidadorRadio = document.getElementById('infoCuidador');
+const empresaRadio = document.getElementById('infoEmpresa');
+const registrarButton = document.getElementById('registrarButton');
 
-  empresaRadio.addEventListener('click', () => {
-    registrarButton.querySelector('a').href = '../register/companyReg.html';
-  });
+clienteRadio.checked = false;
+cuidadorRadio.checked = false;
+empresaRadio.checked = false;
 
-  window.onload = function() {
-    if (clienteRadio.checked || cuidadorRadio.checked || empresaRadio.checked) {
-      clienteRadio.checked = false;
-      cuidadorRadio.checked = false;
-      empresaRadio.checked = false;
-    }
-  };
+const customerRegUrl = '../register/customerReg.html';
+const professRegUrl = '../register/professReg.html';
+const companyRegUrl = '../register/companyReg.html';
+
+clienteRadio.addEventListener('click', () => {
+  registrarButton.href = customerRegUrl;
+});
+
+cuidadorRadio.addEventListener('click', () => {
+  registrarButton.href = professRegUrl;
+});
+
+empresaRadio.addEventListener('click', () => {
+  registrarButton.href = companyRegUrl;
+});
+
+window.onload = function() {
+  if (clienteRadio.checked || cuidadorRadio.checked || empresaRadio.checked) {
+    clienteRadio.checked = false;
+    cuidadorRadio.checked = false;
+    empresaRadio.checked = false;
+  }
+};
 
 </script>
 </body>

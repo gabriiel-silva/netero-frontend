@@ -114,25 +114,32 @@ input{
 #conectarButton:not([disabled]) {
   cursor: pointer; 
 }
-button{
-  background-color: #ffffff !important;
+.formButton{
+  background-color: white;
   font-family: 'Poppins',sans-serif;
   color: #080710;
   padding: 15px 0;
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
+  text-align: center;
   border-radius: 5px;
-}
-.buttonText{
   color: #080710;
-  font-size: 18px;
-  font-weight: 600;
   text-decoration: none;
+  display: block;
 }
 .social{
   margin-top: 30px;
   display: flex;
+}
+.socialItens{
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255,255,255,0.27);
+  color: #eaf0fb;
+  text-align: center;
 }
 .social div{
   background: red;
@@ -142,13 +149,4 @@ button{
   background-color: rgba(255,255,255,0.27);
   color: #eaf0fb;
   text-align: center;
-}
-.social div:hover{
-  background-color: rgba(255,255,255,0.47);
-}
-.social .fb{
-  margin-left: 25px;
-}
-.social i{
-  margin-right: 4px;
 }
