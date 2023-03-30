@@ -142,7 +142,6 @@ border: transparent;
       margin-right: 20px;
     }
   }
-  
 #popup{
 position: absolute;
 top: 50%;
@@ -153,15 +152,42 @@ height: 60%;
 background-color: white;
 border: 1px solid black;
 padding: 20px;
-overflow-y: auto;
+}
+@media only screen and (max-width:900px){
+    #popup{
+        position: absolute;
+        top: 200%;
+    }
+}
+@media only screen and (max-width:768px){
+    #popup{
+        position: absolute;
+        top: 230%;
+    }
+}
+@media only screen and (max-width:550px){
+    #popup{
+        position: absolute;
+        top: 250%;
+    }
+}
+@media only screen and (max-width: 1480px){
+    #popup{
+        width: auto;
+    }
+}
+@media only screen and (max-height: 1200px){
+    #popup{
+        height: auto;
+    }
 }
 #submit-confirmacao{
 position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-width: 60%;
-height: 40%;
+width: auto;
+height: auto;
 background-color: white;
 border: 1px solid black;
 padding: 20px;
@@ -190,8 +216,7 @@ overflow: hidden;
 box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 #enviar{
-position: absolute;
-right: 50px;
+margin-top: 50px;
 bottom: 25px;
 border-radius: 3px;
 background: #1e84c4;
@@ -204,4 +229,9 @@ transition: 0.2s;
 font-size: 1.4rem;
 color: #000000;
 border: transparent;
+}
+#popup-grid{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }

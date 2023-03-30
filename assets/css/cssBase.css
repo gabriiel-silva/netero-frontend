@@ -185,21 +185,8 @@ html {
       flex-direction: column;
     }
   }
-
-/* estilo da porra do lado */ 
+  
 .sidenav {
 background-color: #203A46;
 color: #fff;
-}
-
-.parallax{
-display: flex;
-height: 700px;
-background-attachment: fixed;
-background-position: center bottom;
-background-repeat: no-repeat;
-background-size: cover;
-justify-content: center;
-filter:brightness(0.60) opacity(1);
-align-items: center;
 }

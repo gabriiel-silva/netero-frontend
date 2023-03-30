@@ -1,0 +1,53 @@
+.parallax{
+display: flex;
+height: 700px;
+background-attachment: fixed;
+background-position: center bottom;
+background-repeat: no-repeat;
+background-size: cover;
+justify-content: center;
+filter:brightness(0.60) opacity(1);
+align-items: center;
+}
+.parallax-carousel {
+position: relative;
+height: 700px; 
+overflow: hidden;
+}  
+.parallax-item {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-position: center;
+background-size: cover;
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+}  
+.parallax-item.active {
+opacity: 1 !important;
+}   
+.parallax-item:nth-of-type(1) {
+z-index: 3;
+}
+.parallax-item:nth-of-type(2) {
+z-index: 2;
+}   
+.parallax-item:nth-of-type(3) {
+z-index: 1;
+}  
+.parallax-carousel .prev, .parallax-carousel .next {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+font-size: 2rem;
+color: #fff;
+cursor: pointer;
+}   
+.parallax-carousel .prev {
+left: 20px;
+}  
+.parallax-carousel .next {
+right: 20px;}
+      

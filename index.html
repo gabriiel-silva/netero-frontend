@@ -10,6 +10,7 @@
     <!-- Arquivos CSS -->
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="stylesheet" href="../assets/css/cssBase.css">
+    <link rel="stylesheet" href= "../components/parallax-carousel/parallax.css">
     <!-- Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -23,6 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <!-- Funcionalidades Javascript -->
     <script src="../components/sidenav.js"></script>
+    <script src="../components/parallax-carousel/parallax.js"></script>
 </head>
 <body>
   <div class="row">
@@ -61,7 +63,35 @@
           </span>  Cadastrar</a></li>
   </ul>
 
-<div class="parallax" style="background-image: url(assets/img/index/carousel1.jpg);"></div>
+
+
+
+  <div class="parallax-carousel">
+    <div class="parallax-item">
+      <div class="parallax" style="background-image: url(../assets/img/profissionais_background/4.png);"></div>
+    </div>
+    <div class="parallax-item">
+      <div class="parallax" style="background-image: url(../assets/img/geriatria/1.jpg);"></div>
+    </div>
+    <div class="parallax-item">
+      <div class="parallax" style="background-image: url(../assets/img/cuidadores/carousel1.jpg);"></div>
+    </div>
+    <div class="parallax-item">
+      <div class="parallax" style="background-image: url(../assets/img/fisioterapia/5.jpg);"></div>
+    </div>
+    <div class="parallax-item">
+      <div class="parallax" style="background-image: url(../assets/img/casa_repouso/1.jpg);"></div>
+    </div>
+    <div class="parallax-item">
+      <div class="parallax" style="background-image: url(../assets/img/casa_repouso/2.jpg);"></div>
+    </div>
+    <div class="parallax-item">
+      <div class="parallax" style="background-image: url(../assets/img/profissionais_wide/2.jpg);"></div>
+    </div>
+  </div>
+  <br>
+
+
 
 <div class="container_duplo" style="height: 500px;">
   <div id="left-side">
@@ -132,15 +162,15 @@
   </div>
 </div>
 
-
 <script>
+
 document.getElementById("sobrenvb").addEventListener("click", function() {
 document.getElementById("sobre-pulo").scrollIntoView();
 });
-
 document.getElementById("contatonvb").addEventListener("click", function() {
 document.getElementById("contato-pulo").scrollIntoView();
 });
+
 </script>
 </body>
 </html>
