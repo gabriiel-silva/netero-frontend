@@ -111,19 +111,27 @@ radios.forEach(radio => {
   });
 });
 
-
-
-
-
-
 const clienteRadio = document.getElementById('infoCliente');
 const cuidadorRadio = document.getElementById('infoCuidador');
 const empresaRadio = document.getElementById('infoEmpresa');
 const registrarButton = document.getElementById('registrarButton');
+var usernameLabel = document.getElementById("username");
 
-clienteRadio.checked = false;
-cuidadorRadio.checked = false;
-empresaRadio.checked = false;
+empresaRadio.addEventListener("click", function() {
+  if (empresaRadio.checked) {
+    usernameLabel.textContent = "CNPJ";
+  } else {
+    usernameLabel.textContent = "Email / Telefone";
+  }
+});
+
+clienteRadio.addEventListener("click", function() {
+  usernameLabel.textContent = "Email / Telefone";
+});
+
+cuidadorRadio.addEventListener("click", function() {
+  usernameLabel.textContent = "Email / Telefone";
+});
 
 const customerRegUrl = '../register/customerReg.html';
 const professRegUrl = '../register/professReg.html';
@@ -140,6 +148,10 @@ cuidadorRadio.addEventListener('click', () => {
 empresaRadio.addEventListener('click', () => {
   registrarButton.href = companyRegUrl;
 });
+
+clienteRadio.checked = false;
+cuidadorRadio.checked = false;
+empresaRadio.checked = false;
 
 window.onload = function() {
   if (clienteRadio.checked || cuidadorRadio.checked || empresaRadio.checked) {
