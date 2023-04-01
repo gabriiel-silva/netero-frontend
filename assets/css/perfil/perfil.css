@@ -1,0 +1,16 @@
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: rgb(0, 0, 0) !important;
+        text-transform: uppercase !important;
+        opacity: 1 !important; 
+        }
+
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: black !important;
+        text-transform: uppercase !important;
+        }
+
+        ::-ms-input-placeholder { /* Microsoft Edge */
+        color: black !important;
+        text-transform: uppercase !important;
+        }
