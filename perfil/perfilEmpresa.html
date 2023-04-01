@@ -57,6 +57,7 @@
         text-decoration: none;
         color: white;
     }
+    
     </style>
 </head>
 <body>
@@ -91,7 +92,7 @@
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5">
                     <div id="foto">
                         <img id="perfil-foto" src="">
-                    </div><input type="file" style="width: 21rem; background: transparent;" accept="image/jpeg, image/jpg, image/png" id="input-foto"><br>
+                    </div><input type="file" style=" background: transparent;" accept="image/jpeg, image/jpg, image/png" id="input-foto"><br>
                     <span class="font-weight-bold">{%nomeFantasia}</span><span class="text-black-50">{%emailEmpresa}</span><span> </span></div>
             </div>
             <div class="col-md-4">      <!--SE PA DISOVAR ESSA PORRA DE ALTERAÇÃO KKKKKKKKKKKKKKK-->
@@ -110,11 +111,11 @@
                         <div class="col-md-12"><label class="labels">CNPJ:</label><input type="text" placeholder="{%CNPJ}" class="form-control" disabled></div>
                         <div class="col-md-12"><label class="labels">Email de Contato</label><input type="text" class="form-control" placeholder="email de contato" disabled></div>
                         <div class="col-md-12"><label class="labels">Número de Contato</label><input type="text" class="form-control" placeholder="número de contato" disabled></div>
-                        <div class="col-md-12"><label class="labels">CEP:</label><input type="text" class="form-control" placeholder="{%CEP}"></div>
+                        <div class="col-md-12"><label class="labels">CEP:</label><input type="text" class="form-control" placeholder="{%CEP}"  pattern="[0-9]+" oninput="this.value = this.value.replace(/[^0-9]/g, '');"></div>
                         <div class="col-md-3"><label class="labels">UF:</label><input type="text" class="form-control" placeholder="{%UF}"></div>
                         <div class="col-md-6"><label class="labels">Cidade:</label><input type="text" class="form-control" placeholder="{%CIDADE}"></div>
                         <div class="col-md-9"><label class="labels">Logradouro</label><input type="text" class="form-control" placeholder="{%logradouro}"></div>
-                        <div class="col-md-3"><label class="labels">Nº</label><input type="text" class="form-control" placeholder="{%numero}"></div>
+                        <div class="col-md-3"><label class="labels">Nº</label><input type="text" class="form-control" placeholder="{%numero}"  pattern="[0-9]+" oninput="this.value = this.value.replace(/[^0-9]/g, '');"></div>
                         <div class="col-md-9"><label class="labels">Bairro</label><input type="text" class="form-control" placeholder="{%bairro}"></div>
                     </div>
                     <div class="row mt-3">

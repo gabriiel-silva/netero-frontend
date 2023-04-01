@@ -12,7 +12,7 @@
     <!-- Arquivos CSS -->
     <link rel="stylesheet" href="../assets/css/normalize.css"> 
     <link rel="stylesheet" href="../assets/css/cssBase.css">  
-    <link rel="stylesheet" href="../assets/css/form/form.css">
+    <link rel="stylesheet" href="../assets/css/login/login.css">
     <link rel="stylesheet" href="../assets/css/stakeholders/stakeholders.css">
     <link rel="stylesheet" href="../assets/css/register/register.css">
     <!-- Bibliotecas -->
@@ -85,7 +85,7 @@
     <input type="input" class="form__field" name="sobrenome" required/>
   </div>
   <div class="form__group field">
-    <label class="form__label">CPF:</label>
+    <label id="cpf" class="form__label  cpf">CPF:</label>
     <input type="input" class="form__field" name="cpf" required/>
   </div>
   <div class="form__group field">
@@ -94,7 +94,7 @@
   </div>
   <div class="form__group field">
     <label class="form__label">Número de Contato:</label>
-    <input type="input" class="form__field" name="numero" required/>
+    <input type="input" class="form__field" name="numero" pattern="[0-9]+" required oninput="this.value = this.value.replace(/[^0-9]/g, '');" required/>
   </div>
     
   <div id="senhas-grid">
@@ -118,7 +118,7 @@
 
   <div class="form__group field">
     <label for="cep" class="form__label">CEP:</label>
-    <input type="input" class="form__field" placeholder="cep" name="cep" id='cep' required />
+    <input type="input" class="form__field" placeholder="cep" name="cep" id='cep'  pattern="[0-9]+" required oninput="this.value = this.value.replace(/[^0-9]/g, '');" required />
   </div><br>
 
 
@@ -163,7 +163,7 @@
 </div>&nbsp&nbsp&nbsp&nbsp&nbsp
   <div style="width: 15%;" class="form__group field">
       <label for="numero" class="form__label">Nº:</label>
-      <input type="input" style="width: 50%;"  class="form__field" placeholder="numero" name="numero" id='numero' required />
+      <input type="input" style="width: 50%;"  class="form__field" placeholder="numero" name="numero" id='numero' pattern="[0-9]+" required oninput="this.value = this.value.replace(/[^0-9]/g, '');" required />
   </div>&nbsp&nbsp&nbsp&nbsp&nbsp
   <div style="width: 35%;" class="form__group field">
       <label for="numero" class="form__label">Complemento:</label>
@@ -171,15 +171,15 @@
   </div>
 </div>
 
-<div style="height: 70px;"></div>
-
-<div class="button" id="btn">
-  <span><i class="material-icons">Send</i></span>
-  <span class="left">Cadastrar</span>  
-</div><div style="height: 70px"></div>
+<div style="height: 70px"></div>
+  <div class="mt-5 text-center"><button style="background: #1e84c4; height: 60px; width: 180px;" class="formButton" onclick="redirecionamento()" type="submit">Cadastrar</button></div>
+<div style="height: 70px"></div>
 
 <script>
-  
+function redirecionamento(){
+        window.location.href = "../dashboard/hired-mod.html";
+    }
+
 const input = document.getElementById("input-foto");
 const imagem = document.getElementById("perfil-foto");
 
@@ -192,6 +192,64 @@ input.addEventListener("change", function() {
     reader.readAsDataURL(file);
     });    
     
+
+
+
+
+const cpfInput = document.querySelector('input[name="cpf"]');
+const cpfLabel = document.getElementById('cpf');
+
+
+cpfInput.addEventListener('input', () => {
+  const cpf = cpfInput.value.replace(/\D/g, ''); // remove os caracteres não numéricos
+  const cpfIsValid = validarCPF(cpf);
+
+  const errorLabel = document.querySelector('.form__label--error');
+  if (errorLabel) {
+    errorLabel.remove();
+  }
+
+  if (!cpfIsValid) {
+    const errorElement = document.createElement('span');
+    errorElement.innerHTML = 'CPF inválido!';
+    errorElement.style.color = 'red';
+    errorElement.classList.add('form__label--error');
+    cpfLabel.parentNode.insertBefore(errorElement, cpfLabel.nextSibling);
+  }
+});
+
+function validarCPF(cpf) {
+  if (cpf.length !== 11) {
+    return false;
+  }
+
+  const cpfRegex = /^([0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2})$/;
+
+  if (!cpfRegex.test(cpf)) {
+    return false;
+  }
+
+  const cpfNumbers = cpf.replace(/\D/g, '').split('').map(Number);
+  const [a, b, c, d, e, f, g, h, i, j, k] = cpfNumbers;
+
+  const sum1 = a * 10 + b * 9 + c * 8 + d * 7 + e * 6 + f * 5 + g * 4 + h * 3 + i * 2;
+  const digit1 = (sum1 * 10) % 11;
+
+  if (digit1 !== j) {
+    return false;
+  }
+
+  const sum2 = a * 11 + b * 10 + c * 9 + d * 8 + e * 7 + f * 6 + g * 5 + h * 4 + i * 3 + j * 2;
+  const digit2 = (sum2 * 10) % 11;
+
+  if (digit2 !== k) {
+    return false;
+  }
+
+  return true;
+}
+
+
 </script>
 </body>
 </html>

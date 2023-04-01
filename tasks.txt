@@ -1,9 +1,14 @@
 resolver bugs com botoes(OK)
-formulario pop up (OK)   trabalhar com overlay escuro 
+formulario pop up (OK)   
 carousel  index (OK)
 download assets imgs leo (OK)
 importar imagens (OK)
-design Registrar ()
-tela perfil ()
-tela contratação ()
+BOTOES REGISTRO(OK)
+tela perfil EMPRESA (OK)
+VALIDAÇÃO CPF / CNPJ (OK)
+tela perfil CLIENTE () / PROFISSIONAL (OK)
+CAMPOS OBRIGATORIOS PARA NÚMEROS (OK)
 API ()
+tela contratação ()
+design Registrar ()
+

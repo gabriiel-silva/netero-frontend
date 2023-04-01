@@ -159,7 +159,7 @@
         <div class="popup-infos">E-mail*</div>
         <input type="text" name="email" required><br><br>
         <div class="popup-infos">Número de Contato*</div>
-        <input type="text" name="numero" required><div style="height: 50px;"></div>
+        <input type="text" name="numero" pattern="[0-9]+" required oninput="this.value = this.value.replace(/[^0-9]/g, '');" required><div style="height: 50px;"></div>
         <button id="enviar">Enviar</button>
       </form>
     </div>
