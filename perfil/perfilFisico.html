@@ -27,7 +27,7 @@
     <script src="../components/sidenav.js"></script>
     <!-- Bootstrap 5.0V KKKK ME RENDI-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
+
     <style>
         .brand-logo {
             margin-left: 11px;
@@ -87,7 +87,7 @@
           </span>  Chat</a></li>
     </ul>
 
-<form id="changeInfo" action="../perfil/perfilEmpresa.html">
+<form id="changeInfo" action="../perfil/perfilFisico.html">
     <div class="container rounded bg-white mt-5 mb-5">
         <div class="row">
             <div class="col-md-3 border-right">
@@ -95,7 +95,7 @@
                     <div id="foto">
                         <img id="perfil-foto" src="">
                     </div><input type="file" style=" background: transparent;" accept="image/jpeg, image/jpg, image/png" id="input-foto"><br>
-                    <span class="font-weight-bold">{%nomeFantasia}</span><span class="text-black-50">{%emailEmpresa}</span><span> </span></div>
+                    <span class="font-weight-bold">{%nome}</span><span class="text-black-50">{%email}</span><span> </span></div>
             </div>
             <div class="col-md-4">      <!--SE PA DISOVAR ESSA PORRA DE ALTERAÇÃO KKKKKKKKKKKKKKK-->
                 <div style="height: 25%;"></div>
@@ -104,13 +104,14 @@
             <div class="col-md-5 border-right">
                 <div class="p-3 py-5">
                     <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="text-right">Configurações do Perfil</h4>
+                        <h4 class="text-right">Configurações do perfil </h4>
                     </div>
                     <div class="row mt-2">
-                        <div class="col-md-12"><label class="labels">Nome Fantasia</label><input type="text" class="form-control" placeholder="PUXAR COM ID e endpoint java"></div>
+                        <div class="col-md-9"><label class="labels">Nome</label><input type="text" class="form-control" placeholder="PUXAR COM ID e endpoint java"></div>
+                        <div class="col-md-9"><label class="labels">Sobrenome</label><input type="text" class="form-control" placeholder="{5OBRENOME}"></div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-md-12"><label class="labels">CNPJ:</label><input type="text" placeholder="{%CNPJ}" class="form-control" disabled></div>
+                        <div class="col-md-12"><label class="labels">CPF:</label><input type="text" placeholder="{%CPF}" class="form-control" disabled></div>
                         <div class="col-md-12"><label class="labels">Email de Contato</label><input type="text" class="form-control" placeholder="email de contato" disabled></div>
                         <div class="col-md-12"><label class="labels">Número de Contato</label><input type="text" class="form-control" placeholder="número de contato" disabled></div>
                         <div class="col-md-12"><label class="labels">CEP:</label><input type="text" class="form-control" placeholder="{%CEP}"  pattern="[0-9]+" oninput="this.value = this.value.replace(/[^0-9]/g, '');"></div>
@@ -121,15 +122,15 @@
                         <div class="col-md-9"><label class="labels">Bairro</label><input type="text" class="form-control" placeholder="{%bairro}"></div>
                         <div class="col-md-12"><label class="labels">Complemento</label><input type="text" class="form-control" placeholder="{%complemento}"></div>
                     </div>
-                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" onclick="redirecionamento()" type="submit">Salvar</button></div>
+                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" onclick="redirecionamentoFisico()" type="submit">Salvar</button></div>
                 </div>
             </div>
         </div>
     </div>
 </form>
 <script>
-    function redirecionamento(){
-        window.location.href = "../perfil/perfilEmpresa.html";
+    function redirecionamentoFisico(){
+        window.location.href = "../perfil/perfilFisico.html";
     }
 
 const input = document.getElementById("input-foto");
