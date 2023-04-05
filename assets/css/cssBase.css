@@ -79,7 +79,7 @@ html {
 #left-side {
   color: #7BAD97;
   letter-spacing: 0.5px;
-  font-size: 42px;
+  font-size: 32px;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   flex: 1;
@@ -88,13 +88,15 @@ html {
   align-items: center;
   flex-direction: column;
   display: flex;
+  text-transform: uppercase;
 }
 
 #right-side {
   flex: 1;
   color: #7BAD97;
+  text-transform: uppercase;
   letter-spacing: 0.5px;
-  font-size: 42px;
+  font-size: 32px;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   flex: 1;
