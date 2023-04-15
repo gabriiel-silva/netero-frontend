@@ -1,6 +1,8 @@
 UTILIZE A EXTENSÃO "LIVE SHARE" DO VISUAL STUDIO PARA QUE OS CAMINHOS SEJAM IMPORTADOS CORRETAMENTE !!
 DOCUMENTAÇÃO EM BREVE...
 <h1 align="center">NETERO 🧓❤️</h1>
+![netero](netero.png)
+
 <h3>Sobre</h3>
 
 𖧹 Front-End de um sistema web voltado para contratação de cuidadores de idosos.
