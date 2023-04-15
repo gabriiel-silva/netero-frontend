@@ -5,6 +5,14 @@ DOCUMENTAÇÃO COMPLETA EM BREVE...
 
 ![netero](netero.png)
 
+<h3>Utilização</h3>
+
+𖧹 Recomendável clonar na área de Desktop por conta de importações locais
+```
+git clone https://github.com/III1III/NETERO-FrontEnd.git
+```
+
+
 <h3>Sobre</h3>
 
 𖧹 Front-End de um sistema web voltado para contratação de cuidadores de idosos.
