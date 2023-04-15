@@ -1,6 +1,6 @@
 UTILIZE A EXTENSÃO "LIVE SHARE" DO VISUAL STUDIO PARA QUE OS CAMINHOS SEJAM IMPORTADOS CORRETAMENTE !!
 DOCUMENTAÇÃO COMPLETA EM BREVE...
-<h1 align="center">NETERO 🧓❤️</h1>
+<h1 align="center">NETERO</h1>
 
 ![netero](netero.png)
 
