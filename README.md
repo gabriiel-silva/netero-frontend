@@ -42,4 +42,4 @@ git clone https://github.com/III1III/NETERO-FrontEnd.git
 
 <h3>Bibliotecas:</h3>
 
-𖧹 Não listado (ainda)
+𖧹 Não listado
