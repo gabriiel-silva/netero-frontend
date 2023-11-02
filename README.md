@@ -4,7 +4,7 @@
 
 <h3>Utilização</h3>
 
-𖧹 Recomendável clonar na área de Desktop por conta de importações locais
+𖧹 Clonar na área Desktop
 ```
 git clone https://github.com/III1III/NETERO-FrontEnd.git
 ```
