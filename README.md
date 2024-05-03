@@ -6,7 +6,7 @@
 
 𖧹 Clone project or visit deployed version on https://netero-frontend.vercel.app/
 ```
-git clone https://github.com/III1III/NETERO-FrontEnd.git
+https://github.com/gabriiel-silva/netero-frontend.git
 ```
 
 <h3>About</h3>
