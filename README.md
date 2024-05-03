@@ -2,16 +2,16 @@
 
 ![netero](netero.png)
 
+<h3>About</h3>
+
+𖧹 Static front-end of a specialized web system for hiring elderly caregivers.
+
 <h3>Use Project</h3>
 
 𖧹 Clone project or visit deployed version on https://netero-frontend.vercel.app/
 ```
 https://github.com/gabriiel-silva/netero-frontend.git
 ```
-
-<h3>About</h3>
-
-𖧹 Static front-end of a specialized web system for hiring elderly caregivers.
 
 <h3>Some features:</h3>
 <p> 𖧹 CPF/CNPJ validations </p>
