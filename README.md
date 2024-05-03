@@ -1,4 +1,4 @@
-<h1 align="center"> NETERO </h1>
+<h1 align="center"> NETERO - Static Frontend</h1>
 
 ![netero](netero.png)
 
