@@ -2,30 +2,29 @@
 
 ![netero](netero.png)
 
-<h3>Utilização</h3>
+<h3>Use Project</h3>
 
-𖧹 Clonar na área Desktop
+𖧹 Clone project or visit deployed version on https://netero-frontend.vercel.app/
 ```
 git clone https://github.com/III1III/NETERO-FrontEnd.git
 ```
 
+<h3>About</h3>
 
-<h3>Sobre</h3>
+𖧹 Static front-end of a specialized web system for hiring elderly caregivers.
 
-𖧹 Front-End de um sistema web voltado para contratação de cuidadores de idosos.
+<h3>Some features:</h3>
+<p> 𖧹 CPF/CNPJ validations </p>
+<p> 𖧹 Autofill address information with postal code </p>
+<p> 𖧹 Locale API consumed with Jquery to facilitate registration </p>
+<p> 𖧹 101% Responsive </p>
 
-<h3>Algumas das funcionalidades:</h3>
-<p> 𖧹 Validações CPF / CNPJ </p>
-<p> 𖧹 Auto Fill de informações de endereço com CEP </p>
-<p> 𖧹 API de localidade consumida com Jquery para facilitar cadastro </p>
-<p> 𖧹 100% Responsivo </p>
-
-<h3>Tecnologias Web:</h3>
+<h3>Web Technologies:</h3>
 
 <p> 𖧹 HTML5 </P>
 𖧹 CSS3
 
-<h3>Linguagem de Programação:</h3>
+<h3>Programming language:</h3>
 
 𖧹 JavaScript
 
@@ -36,10 +35,11 @@ git clone https://github.com/III1III/NETERO-FrontEnd.git
 <p> 𖧹 Materialize </p>
 𖧹 Webpack
 
-<h3>Ferramentas de desenvolvimento:</h3>
+<h3>Development tools:</h3>
 
 𖧹 GIT
 
-<h3>Bibliotecas:</h3>
+<h3>Libraries:</h3>
 
-𖧹 Não listado
+𖧹 Not listed
+
